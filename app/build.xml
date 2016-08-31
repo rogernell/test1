@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ESFM" default="all" basedir=".">
+    
+    <property name="out.dir" value="${basedir}/out"/>
+    <property name="classes.dir" value="${out.dir}/classes"/>
+    <property name="src.main.dir" value="${basedir}/src/main"/>
+    
+    <target name="all" depends="compile"/>
+    
+    <target name="compile">
+        <delete dir="${out.dir}" quiet="true"/>
+        <mkdir dir="${classes.dir}"/>
+        <javac destdir="${classes.dir}" srcdir="${src.main.dir}"/>
+    </target>
+</project>
